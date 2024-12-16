@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Watermelon : MonoBehaviour
 {
+    int Healthpoint = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,14 @@ public class Watermelon : MonoBehaviour
     void Update()
     {
         
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        print(Healthpoint);
+        Healthpoint = Healthpoint - 1;
+        if(Healthpoint <= 0)
+        {
+            gameObject.Destroy();
+        }
     }
 }

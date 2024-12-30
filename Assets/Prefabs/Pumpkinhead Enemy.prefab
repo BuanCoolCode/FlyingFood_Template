@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1000011216760202
+--- !u!1 &2652822737107104157
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4000012037240470}
-  - component: {fileID: 33000011532679434}
-  - component: {fileID: 23000014034575758}
+  - component: {fileID: 3111541960773981374}
+  - component: {fileID: 2396038655302578833}
+  - component: {fileID: 4518265294932722225}
   m_Layer: 0
-  m_Name: Watermelon
+  m_Name: Pumpkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000012037240470
+--- !u!4 &3111541960773981374
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011216760202}
+  m_GameObject: {fileID: 2652822737107104157}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6089616014647131430}
-  m_Father: {fileID: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.71429634, w: 0.69984347}
+  m_LocalPosition: {x: 0.0229, y: 0.0017, z: 0.0029}
+  m_LocalScale: {x: 0.119047605, y: 0.119047605, z: 0.11904763}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 3930501533612543173}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33000011532679434
+--- !u!33 &2396038655302578833
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011216760202}
-  m_Mesh: {fileID: 4300000, guid: d0f2ab72785049643aa6edc83f32d9ab, type: 3}
---- !u!23 &23000014034575758
+  m_GameObject: {fileID: 2652822737107104157}
+  m_Mesh: {fileID: 4300000, guid: e0104657a83d1374b8e7cda818970954, type: 3}
+--- !u!23 &4518265294932722225
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011216760202}
+  m_GameObject: {fileID: 2652822737107104157}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd4330fb196ead84ea9d14e6bbbe8ed5, type: 2}
+  - {fileID: 2100000, guid: 638042ec668ac9f49b4925cfb415cf4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4454590665389573186
+--- !u!1 &4925744211514895678
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,9 +91,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6089616014647131430}
-  - component: {fileID: 4396756242035701237}
-  - component: {fileID: 1813838961310723441}
+  - component: {fileID: 3930501533612543173}
+  m_Layer: 0
+  m_Name: Pumpkinhead Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3930501533612543173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925744211514895678}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.71429634, w: 0.69984347}
+  m_LocalPosition: {x: -2.131, y: 2.27, z: 11.8}
+  m_LocalScale: {x: 16.8, y: 16.8, z: 16.8}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1677651559994455826}
+  - {fileID: 3111541960773981374}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -91.171}
+--- !u!1 &9032377797430683478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1677651559994455826}
+  - component: {fileID: 4334946546651792302}
+  - component: {fileID: 9177192695573772604}
   m_Layer: 0
   m_Name: Collider (Watermelon)
   m_TagString: Untagged
@@ -102,28 +134,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6089616014647131430
+--- !u!4 &1677651559994455826
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4454590665389573186}
+  m_GameObject: {fileID: 9032377797430683478}
   serializedVersion: 2
   m_LocalRotation: {x: -0.06746461, y: 0.048077043, z: 0.6865766, w: 0.7223225}
-  m_LocalPosition: {x: 0.0021, y: 0.0071, z: -0.0014}
-  m_LocalScale: {x: 0.059523802, y: 0.059523802, z: 0.059523813}
+  m_LocalPosition: {x: 0.0336, y: -0.0001, z: 0.0049}
+  m_LocalScale: {x: 0.059523802, y: 0.022540828, z: 0.059523813}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4000012037240470}
+  m_Father: {fileID: 3930501533612543173}
   m_LocalEulerAnglesHint: {x: -9.409, y: -1.347, z: 87.204}
---- !u!136 &4396756242035701237
+--- !u!136 &4334946546651792302
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4454590665389573186}
+  m_GameObject: {fileID: 9032377797430683478}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -136,21 +168,21 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 3
+  m_Radius: 0.4
+  m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1813838961310723441
+--- !u!114 &9177192695573772604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4454590665389573186}
+  m_GameObject: {fileID: 9032377797430683478}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d38f85d2545648e4b5dbec12115bc83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Healthpoint: 100
-  watermelon: {fileID: 1000011216760202}
+  Healthpoint: 10
+  watermelon: {fileID: 4925744211514895678}

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Watermelon : MonoBehaviour
 {
-    int Healthpoint = 100;
+    [SerializeField]int Healthpoint = 100;
+    [SerializeField] GameObject watermelon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class Watermelon : MonoBehaviour
         Healthpoint = Healthpoint - 1;
         if(Healthpoint <= 0)
         {
-            gameObject.Destroy();
+            Destroy(watermelon);
         }
     }
 }

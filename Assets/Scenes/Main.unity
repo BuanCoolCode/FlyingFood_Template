@@ -574,6 +574,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2467845069284678478, guid: 3c0b460c20e5c954d8523df4157882d1, type: 3}
   m_PrefabInstance: {fileID: 17123357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &18201300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 18201304}
+  - component: {fileID: 18201303}
+  - component: {fileID: 18201302}
+  - component: {fileID: 18201301}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &18201301
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18201300}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &18201302
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18201300}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &18201303
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18201300}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &18201304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18201300}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.1033134, y: -8.061066, z: 10.474243}
+  m_LocalScale: {x: 45.59287, y: 0.3002, z: 44.79198}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1447870857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &19713862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -752,6 +857,10 @@ PrefabInstance:
     - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
       propertyPath: m_Name
       value: Pumpkinhead Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7744,6 +7853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkinhead Enemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8209,63 +8322,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6166584487648029287, guid: cc2c18e189d423749bcb27809650683d, type: 3}
   m_PrefabInstance: {fileID: 747021265}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &498414228
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.278
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69984347
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.71429634
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930501533612543173, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -91.171
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925744211514895678, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-      propertyPath: m_Name
-      value: Watermelon Boss
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
 --- !u!1001 &499948774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9161,6 +9217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avocado Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: a3ee10e1eff194da59acb79ccc42b83f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9679,6 +9739,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6526184997810210037, guid: aec71fa5d6ab24744bbfb3afb66de766, type: 3}
   m_PrefabInstance: {fileID: 1523562498}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &550295016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550295017}
+  - component: {fileID: 550295019}
+  - component: {fileID: 550295018}
+  m_Layer: 0
+  m_Name: Spawner Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &550295017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550295016}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7204633, w: 0.6934931}
+  m_LocalPosition: {x: 2.7120657, y: -0.63230896, z: -0.37490845}
+  m_LocalScale: {x: 2.0743, y: 1.8007333, z: 2.0406594}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1447870857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 92.185}
+--- !u!23 &550295018
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550295016}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &550295019
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550295016}
+  m_Mesh: {fileID: -8083796048661949600, guid: 37d1da0067b60bd4282c0eaee639654e, type: 3}
 --- !u!1001 &553132724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11676,6 +11819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkinhead Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11991,6 +12138,10 @@ PrefabInstance:
     - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
       propertyPath: m_Name
       value: Pumpkinhead Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16982,6 +17133,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a7ee6b8409d984478bcc1746266691b, type: 3}
+--- !u!1001 &947101304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3094939949441361060, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: PlayerTransform
+      value: 
+      objectReference: {fileID: 1415824023}
+    - target: {fileID: 3094939949441361060, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: SpawnerTransform
+      value: 
+      objectReference: {fileID: 550295017}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.444305
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69984347
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.71429634
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930501533612543173, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -91.171
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
+      propertyPath: m_Name
+      value: WM Statue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d0a2fa93b4c54463bfec0ec7340e7e9, type: 3}
 --- !u!4 &948578047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6166584487648029287, guid: cc2c18e189d423749bcb27809650683d, type: 3}
@@ -18274,6 +18490,10 @@ PrefabInstance:
     - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
       propertyPath: m_Name
       value: Pumpkinhead Enemy (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26198,6 +26418,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6166584487648029287, guid: cc2c18e189d423749bcb27809650683d, type: 3}
   m_PrefabInstance: {fileID: 1461286345}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1447870856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447870857}
+  m_Layer: 0
+  m_Name: Boss Arena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447870857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447870856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.442786, y: 186.76106, z: 363.32574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 18201304}
+  - {fileID: 550295017}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1450091456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28434,6 +28687,10 @@ PrefabInstance:
     - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
       propertyPath: m_Name
       value: Pumpkinhead Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31108,6 +31365,10 @@ PrefabInstance:
     - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
       propertyPath: m_Name
       value: Pumpkinhead Enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925744211514895678, guid: ac7fe44db01844e0c92f6db2ed926ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39878,7 +40139,6 @@ SceneRoots:
   - {fileID: 4676594328614454312}
   - {fileID: 1776635732}
   - {fileID: 1991426763}
-  - {fileID: 498414228}
   - {fileID: 524473237}
   - {fileID: 684611603}
   - {fileID: 1549647532}
@@ -39887,3 +40147,5 @@ SceneRoots:
   - {fileID: 474970540}
   - {fileID: 1680325129}
   - {fileID: 1025674811}
+  - {fileID: 1447870857}
+  - {fileID: 947101304}

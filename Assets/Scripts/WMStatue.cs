@@ -1,25 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WMStatue : MonoBehaviour
 {
-    [SerializeField] Transform PlayerTransform;
-    [SerializeField] Transform SpawnerTransform;
+[SerializeField] GameObject ChallengeText;
+private bool PlayerIsInRange = false;
+[SerializeField] string SceneToLoad;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+     if (PlayerIsInRange && Input.GetKeyDown(KeyCode.E))
+     {
+        print("pressedE");
+        SceneManager.LoadScene(SceneToLoad);
+     }
     }
-    void OnCollisionEnter(Collision other)
+    private void OnTriggerStay(Collider other)
     {
-        PlayerTransform.position = new Vector3(0,1000,0);
-        print("Hello");
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            ChallengeText.SetActive(true);
+            PlayerIsInRange = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            ChallengeText.SetActive(false);
+            PlayerIsInRange = false;
+        }
     }
 }

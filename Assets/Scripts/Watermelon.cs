@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Watermelon : MonoBehaviour
 {
-    [SerializeField]int Healthpoint = 100;
+    private bool IsDying = false;
+    [SerializeField]int Healthpoint = 5;
     [SerializeField] GameObject watermelon;
+    [SerializeField] AudioSource MusicSource;
+    [SerializeField] Rigidbody rigidBody;
 
     // Start is called before the first frame update
     void Start()
@@ -14,17 +17,31 @@ public class Watermelon : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (IsDying)
+        {
+            MusicSource.volume = MusicSource.volume-0.003f;
+        }   
     }
     void OnCollisionEnter(Collision other)
     {
+        if (IsDying)
+        {
+            return;
+        }
         print(Healthpoint);
         Healthpoint = Healthpoint - 1;
         if(Healthpoint <= 0)
         {
-            Destroy(watermelon);
+            StartCoroutine(Death());
         }
+    }
+    IEnumerator Death()
+    {
+        IsDying = true;
+        rigidBody.constraints = RigidbodyConstraints.None;
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
     }
 }

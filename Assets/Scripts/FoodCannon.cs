@@ -10,6 +10,7 @@ public class FoodCannon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject newFood = Instantiate(food, shootPoint.position, Random.rotation);
+            newFood.tag = "Projectiles";
             newFood.GetComponent<Rigidbody>().velocity = shootPoint.forward * 30;
         }
 

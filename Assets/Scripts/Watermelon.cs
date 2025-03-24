@@ -5,15 +5,15 @@ using UnityEngine;
 public class Watermelon : MonoBehaviour
 {
     private bool IsDying = false;
-    [SerializeField]int Healthpoint = 5;
+    [SerializeField] public int Healthpoint = 5;
     [SerializeField] GameObject watermelon;
     [SerializeField] AudioSource MusicSource;
     [SerializeField] Rigidbody rigidBody;
-
+    public int MaxHealth;
     // Start is called before the first frame update
     void Start()
     {
-        
+        MaxHealth = Healthpoint;
     }
 
     // Update is called once per frame
@@ -30,7 +30,10 @@ public class Watermelon : MonoBehaviour
         {
             return;
         }
-        print(Healthpoint);
+        if (other.rigidbody.gameObject.tag != "Projectiles")
+        {
+            return;
+        }
         Healthpoint = Healthpoint - 1;
         if(Healthpoint <= 0)
         {

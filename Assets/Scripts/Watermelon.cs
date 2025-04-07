@@ -30,7 +30,7 @@ public class Watermelon : MonoBehaviour
         {
             return;
         }
-        if (other.rigidbody.gameObject.tag != "Projectiles")
+        if (other.gameObject.tag != "Projectiles")
         {
             return;
         }

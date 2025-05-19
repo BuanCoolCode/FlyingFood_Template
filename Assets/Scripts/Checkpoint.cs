@@ -9,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     private bool Activated = false;
     [SerializeField] Material ActiveMaterial;
     private GameObject PlayerInRange;
+    [SerializeField] GameObject Spawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,6 @@ public class Checkpoint : MonoBehaviour
         print ("activate");
         Activated = true;
         GetComponent < MeshRenderer >().material = ActiveMaterial;
-        PlayerInRange.GetComponent < CheckpointHandler >().LastCheckpoint = transform;
+        PlayerInRange.GetComponent < CheckpointHandler >().LastCheckpoint = Spawn.transform;
     }
 }

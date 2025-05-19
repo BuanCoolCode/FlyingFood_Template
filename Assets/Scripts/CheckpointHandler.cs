@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckpointHandler : MonoBehaviour
 {
@@ -16,8 +17,15 @@ public class CheckpointHandler : MonoBehaviour
     {
         
     }
-    void Respawn()
+    public void Respawn()
     {
+        if(LastCheckpoint == null)
+        {
+            SceneManager.LoadScene("Main");
+            return;
+        }
         transform.position = LastCheckpoint.position;
+        print ("print");
+        
     }
 }

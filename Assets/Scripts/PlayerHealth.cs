@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] GameObject Deathscreen;
     [SerializeField] KinematicCharacterMotor exampleCharacterController;
     [SerializeField] AudioSource MusicSource;
+    [SerializeField] CheckpointHandler checkpointHandler;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,9 @@ public class PlayerHealth : MonoBehaviour
         Deathscreen.SetActive(true);
         exampleCharacterController.enabled = false;
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene("Main");
+        checkpointHandler.Respawn();
+        yield return new WaitForSeconds(0.5f);
+        exampleCharacterController.enabled = true;
     }
      void OnTriggerEnter(Collider other)
     {

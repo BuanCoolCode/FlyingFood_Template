@@ -155,6 +155,8 @@ namespace KinematicCharacterController
     [RequireComponent(typeof(CapsuleCollider))]
     public class KinematicCharacterMotor : MonoBehaviour
     {
+        public static KinematicCharacterMotor instance;
+
 #pragma warning disable 0414
         [Header("Components")]
         /// <summary>
@@ -737,6 +739,7 @@ namespace KinematicCharacterController
 
         private void Awake()
         {
+            instance = this;
             _transform = this.transform;
             ValidateData();
 

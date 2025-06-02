@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Watermelon : MonoBehaviour
 {
-    private bool IsDying = false;
+    public bool IsDying = false;
     [SerializeField] public int Healthpoint = 5;
     [SerializeField] GameObject watermelon;
     [SerializeField] AudioSource MusicSource;

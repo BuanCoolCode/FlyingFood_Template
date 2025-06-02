@@ -9,7 +9,8 @@ public class Checkpoint : MonoBehaviour
     private bool Activated = false;
     [SerializeField] Material ActiveMaterial;
     private GameObject PlayerInRange;
-    [SerializeField] GameObject Spawn;
+    [SerializeField] public GameObject Spawn;
+    [SerializeField] GameObject Boss;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +46,7 @@ public class Checkpoint : MonoBehaviour
     void Activate()
     {
         if (Activated) return;
+        if (Boss != null) return;
         print ("activate");
         Activated = true;
         GetComponent < MeshRenderer >().material = ActiveMaterial;

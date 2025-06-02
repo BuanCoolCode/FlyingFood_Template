@@ -441,6 +441,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306357716}
   m_CullTransparentMesh: 1
+--- !u!1 &396342545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396342547}
+  - component: {fileID: 396342546}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &396342546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396342545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187df23601fc04775a406ef2f74d8587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WatermelonBoss: {fileID: 1743802688}
+--- !u!4 &396342547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396342545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5537713, y: 0.01545603, z: 16.196337}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460515901
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +907,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 66758865}
   food: {fileID: 3393670468255704466, guid: b992ff6a162e849ef87331e3782396fc, type: 3}
+--- !u!1 &675413090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4925744211514895678, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
+  m_PrefabInstance: {fileID: 1743802687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &695913943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,7 +2758,6 @@ MonoBehaviour:
   MaxHealth: 0
   Deathscreen: {fileID: 645747966}
   exampleCharacterController: {fileID: 1599940027}
-  MusicSource: {fileID: 1743802690}
   checkpointHandler: {fileID: 1599940031}
 --- !u!114 &1599940031
 MonoBehaviour:
@@ -3010,17 +3059,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2492213264812686966, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
   m_PrefabInstance: {fileID: 1743802687}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 675413090}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d38f85d2545648e4b5dbec12115bc83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1743802690 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7983426720022608721, guid: e3227237f77d649c787db981d8c29a0d, type: 3}
-  m_PrefabInstance: {fileID: 1743802687}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1785659102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,6 +3649,10 @@ PrefabInstance:
       value: Praying Place
       objectReference: {fileID: 0}
     - target: {fileID: 9033301925615714200, guid: 0840b663dc0a640cf99777a01d47d783, type: 3}
+      propertyPath: Boss
+      value: 
+      objectReference: {fileID: 675413090}
+    - target: {fileID: 9033301925615714200, guid: 0840b663dc0a640cf99777a01d47d783, type: 3}
       propertyPath: TextPrompt
       value: 
       objectReference: {fileID: 1082299243}
@@ -3852,3 +3900,4 @@ SceneRoots:
   - {fileID: 1743802687}
   - {fileID: 695913947}
   - {fileID: 1911351019}
+  - {fileID: 396342547}

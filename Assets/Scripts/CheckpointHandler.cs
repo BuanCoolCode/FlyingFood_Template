@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using KinematicCharacterController;
 
 public class CheckpointHandler : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class CheckpointHandler : MonoBehaviour
             SceneManager.LoadScene("Main");
             return;
         }
-        transform.position = LastCheckpoint.position;
+        GameManager.Instance.Respawn(LastCheckpoint.position);
         print ("print");
         
     }

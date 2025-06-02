@@ -11,7 +11,6 @@ public class PlayerHealth : MonoBehaviour
     public int MaxHealth;
     [SerializeField] GameObject Deathscreen;
     [SerializeField] KinematicCharacterMotor exampleCharacterController;
-    [SerializeField] AudioSource MusicSource;
     [SerializeField] CheckpointHandler checkpointHandler;
     // Start is called before the first frame update
     void Start()
@@ -32,10 +31,14 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator Death()
     {
+        GameManager.Instance.Death();
         Deathscreen.SetActive(true);
         exampleCharacterController.enabled = false;
         yield return new WaitForSeconds(4);
+        Healthpoint = MaxHealth;
         checkpointHandler.Respawn();
+        Deathscreen.SetActive(false);
+        IsDying = false;
         yield return new WaitForSeconds(0.5f);
         exampleCharacterController.enabled = true;
     }
@@ -51,12 +54,6 @@ public class PlayerHealth : MonoBehaviour
         }
 
     }
-    void FixedUpdate()
-    {
-        if (IsDying)
-        {
-            MusicSource.volume = MusicSource.volume-0.003f;
-        }   
-    }
+    
 
 }

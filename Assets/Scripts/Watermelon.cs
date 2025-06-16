@@ -9,6 +9,8 @@ public class Watermelon : MonoBehaviour
     [SerializeField] GameObject watermelon;
     [SerializeField] AudioSource MusicSource;
     [SerializeField] Rigidbody rigidBody;
+    [SerializeField] UnityEngine.AI.NavMeshAgent Agent;
+    [SerializeField] Transform PlayerTransform;
     public int MaxHealth;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,10 @@ public class Watermelon : MonoBehaviour
     }
 
     // Update is called once per frame
+     void Update()
+    {
+        Agent.destination = PlayerTransform.position; 
+    }
     void FixedUpdate()
     {
         if (IsDying)
@@ -43,7 +49,7 @@ public class Watermelon : MonoBehaviour
     IEnumerator Death()
     {
         IsDying = true;
-        rigidBody.constraints = RigidbodyConstraints.None;
+        //rigidBody.constraints = RigidbodyConstraints.None;
         yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }

@@ -13,9 +13,14 @@ public class Watermelon : MonoBehaviour
     [SerializeField] Transform PlayerTransform;
     public int MaxHealth;
     // Start is called before the first frame update
+
+
     void Start()
     {
         MaxHealth = Healthpoint;
+        GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 1000, 0);
+
     }
 
     // Update is called once per frame
@@ -23,6 +28,7 @@ public class Watermelon : MonoBehaviour
     {
         Agent.destination = PlayerTransform.position; 
     }
+
     void FixedUpdate()
     {
         if (IsDying)

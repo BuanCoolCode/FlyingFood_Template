@@ -6,7 +6,9 @@ public class Watermelon : MonoBehaviour
 {
     public bool IsDying = false;
     [SerializeField] public int Healthpoint = 5;
+    [SerializeField] public int jumpHeight = 5;
     [SerializeField] GameObject watermelon;
+    [SerializeField] GameObject landingFX;
     [SerializeField] AudioSource MusicSource;
     [SerializeField] Rigidbody rigidBody;
     [SerializeField] UnityEngine.AI.NavMeshAgent Agent;
@@ -18,11 +20,13 @@ public class Watermelon : MonoBehaviour
     void Start()
     {
         MaxHealth = Healthpoint;
-        GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 1000, 0);
-
+        InvokeRepeating(nameof(Jump),5,5);
     }
-
+    private void Jump()
+    {
+        GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
+        GetComponent<Rigidbody>().velocity = new Vector3(0, jumpHeight, 0);
+    }
     // Update is called once per frame
      void Update()
     {
@@ -38,6 +42,7 @@ public class Watermelon : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
+        Instantiate(landingFX,transform.position,Quaternion.identity);
         if (IsDying)
         {
             return;
